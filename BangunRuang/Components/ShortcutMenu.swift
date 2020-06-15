@@ -10,6 +10,11 @@ import UIKit
 
 let reuseIdentifierShortcut = "Cell"
 
+protocol ShortcutMenuDelegate {
+    func selectShape(shape: ShapeEnum)
+}
+
+
 class ShortcutMenu: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let menuItems: [Menu] = [
           Menu(name: "Kubus", image: #imageLiteral(resourceName: "kubus")),
@@ -19,6 +24,8 @@ class ShortcutMenu: UIViewController, UICollectionViewDelegate, UICollectionView
       ]
 
     @IBOutlet var collectionView: UICollectionView!
+    
+    var delegate: ShortcutMenuDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,17 +51,16 @@ class ShortcutMenu: UIViewController, UICollectionViewDelegate, UICollectionView
                 cell.label.text = menuItems[indexPath.row].name
                 return cell
             }
-        
-            // Configure the cell
-        
         return ShortcutMenuItem()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
+            self.delegate?.selectShape(shape: .kubus)
             break
         case 1:
+            self.delegate?.selectShape(shape: .limas)
             break
         case 2:
             showAlert()

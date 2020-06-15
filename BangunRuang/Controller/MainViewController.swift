@@ -9,8 +9,7 @@
 import UIKit
 import RealityKit
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, ShortcutMenuDelegate {
     @IBOutlet var arView: ARView!
     @IBOutlet var buttonBack: UIButton!
     @IBOutlet var buttonChangeObj: UIButton!
@@ -28,13 +27,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         containerInfo.layer.cornerRadius = 10
         
-        
         prepareShape(shape: currentShape)
     }
     
     func prepareShape(shape: ShapeEnum) {
         // Load the "Box" scene from the "Experience" Reality File
-        
+        arView.scene.anchors.removeAll()
         switch shape {
         case .kubus:
             labelTitle.text = "Kubus"
@@ -46,15 +44,20 @@ class MainViewController: UIViewController {
             break
         case .limas:
             labelTitle.text = "Limas"
-            let obj = try! Experience.loadBox()
-            arView.scene.anchors.append(obj)
+            let obj3D = try! Experience.loadBox()
+            let obj2D = try! Experience.loadBox()
+            arView.scene.anchors.append(contentsOf: [obj3D, obj2D])
+            arView.scene.anchors[1].isEnabled = false
             break
         default:
-            let obj = try! Experience.loadBox()
-            arView.scene.anchors.append(obj)
+            let obj3D = try! Experience.loadBox()
+            let obj2D = try! Experience.loadBox()
+            arView.scene.anchors.append(contentsOf: [obj3D, obj2D])
+            arView.scene.anchors[1].isEnabled = false
             break
         }
         
+        buttonNext.isEnabled = true
         buttonPrev.isEnabled = false
     }
     
@@ -127,6 +130,17 @@ class MainViewController: UIViewController {
         
         //finally presenting the dialog box
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func selectShape(shape: ShapeEnum) {
+        currentShape = shape
+        prepareShape(shape: shape)
+     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ShortcutMenu {
+            vc.delegate = self
+        }
     }
     
     /*

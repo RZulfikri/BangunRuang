@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44052A1D24971E3400A55294 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44052A1C24971E3400A55294 /* InfoViewController.swift */; };
+		44052A1F2497265700A55294 /* ShapeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44052A1E2497265700A55294 /* ShapeInfo.swift */; };
 		443FEEE624938C4700AADE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443FEEE524938C4700AADE71 /* AppDelegate.swift */; };
 		443FEEE824938C4700AADE71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443FEEE724938C4700AADE71 /* ViewController.swift */; };
 		443FEEEA24938C4700AADE71 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 443FEEE924938C4700AADE71 /* Experience.rcproject */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		44052A1C24971E3400A55294 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		44052A1E2497265700A55294 /* ShapeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeInfo.swift; sourceTree = "<group>"; };
 		443FEEE224938C4700AADE71 /* BangunRuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BangunRuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443FEEE524938C4700AADE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443FEEE724938C4700AADE71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				44A9F0202496EC4C00BF0994 /* Menu.swift */,
 				44A9F0222496EED900BF0994 /* ShapeEnum.swift */,
+				44052A1E2497265700A55294 /* ShapeInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				44A9F0212496EC4C00BF0994 /* Menu.swift in Sources */,
 				443FEEE624938C4700AADE71 /* AppDelegate.swift in Sources */,
 				44A9F01E2496E74600BF0994 /* MenuHeader.swift in Sources */,
+				44052A1F2497265700A55294 /* ShapeInfo.swift in Sources */,
 				44C67A4F249712E400F719AE /* ShortcutMenu.swift in Sources */,
 				44A9F01C2496E5C300BF0994 /* MenuItem.swift in Sources */,
 				443FEEEA24938C4700AADE71 /* Experience.rcproject in Sources */,
