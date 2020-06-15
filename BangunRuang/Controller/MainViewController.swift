@@ -102,7 +102,8 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
     }
     
     func onPressInfo() {
-        performSegue(withIdentifier: "main2info", sender: currentShape)
+        showAlert()
+//        performSegue(withIdentifier: "main2info", sender: currentShape)
     }
     
     @IBAction func onPressButton(_ sender: UIButton) {
