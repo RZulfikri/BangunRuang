@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "jaringkubus.png",
+      "filename" : "infolimas.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "jaringkubus@2x.png",
+      "filename" : "infolimas@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "jaringkubus@3x.png",
+      "filename" : "infolimas@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

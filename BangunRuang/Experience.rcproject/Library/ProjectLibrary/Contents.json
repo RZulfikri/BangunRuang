@@ -23,5 +23,15 @@
     "libraryIdentifier" : "088452e835aa9643d6be42f27b90025e",
     "format" : "model",
     "displayName" : "kubusungutexture.usdz"
+  },
+  {
+    "libraryIdentifier" : "efe3748681df7bff8a22dc2541c3bbab",
+    "format" : "model",
+    "displayName" : "limasbaru.usdz"
+  },
+  {
+    "libraryIdentifier" : "ff15fadaf457f69868103232883e4d0b",
+    "format" : "model",
+    "displayName" : "limasbaru6.usdz"
   }
 ]

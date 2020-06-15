@@ -323,49 +323,57 @@
         <scene sceneID="l3d-Et-tKt">
             <objects>
                 <viewController id="WPC-qb-Zd8" customClass="InfoViewController" customModule="BangunRuang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MqZ-5H-jfC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="MqZ-5H-jfC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-7U-F4n">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-7U-F4n">
                                 <rect key="frame" x="60" y="22" width="41" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="GtW-dO-fUx"/>
-                                    <constraint firstAttribute="height" constant="41" id="gFc-YP-xbm"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CircleBack"/>
                                 <connections>
                                     <action selector="onPressBack:" destination="WPC-qb-Zd8" eventType="touchUpInside" id="WIw-cq-UkJ"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-2r-73V">
-                                <rect key="frame" x="24" y="31" width="768" height="322"/>
+                                <rect key="frame" x="64" y="71" width="768" height="322"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-Bp-djl">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-Bp-djl">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="322"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.92156862750000001" green="0.28235294119999998" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pLX-Bp-djl" secondAttribute="trailing" id="AJ9-ol-f3N"/>
+                                    <constraint firstItem="pLX-Bp-djl" firstAttribute="leading" secondItem="nOC-4o-HDB" secondAttribute="leading" id="jnb-EP-Fd5"/>
+                                    <constraint firstItem="pLX-Bp-djl" firstAttribute="top" secondItem="h9n-2r-73V" secondAttribute="top" id="kFu-Zp-CrD"/>
+                                    <constraint firstAttribute="bottom" secondItem="pLX-Bp-djl" secondAttribute="bottom" id="p2u-Hb-Rge"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="kiz-Uu-Pgt"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="nOC-4o-HDB"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcU-hF-LPW">
+                                <rect key="frame" x="234" y="32" width="428" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="h9n-2r-73V" firstAttribute="leading" secondItem="ycs-NF-0Dy" secondAttribute="leading" constant="20" id="0HA-Up-h14"/>
-                            <constraint firstItem="1wK-7U-F4n" firstAttribute="leading" secondItem="ycs-NF-0Dy" secondAttribute="leading" constant="16" id="Lfv-RN-EzB"/>
-                            <constraint firstItem="h9n-2r-73V" firstAttribute="width" secondItem="MqZ-5H-jfC" secondAttribute="width" multiplier="0.857143" id="QpL-t6-pdm"/>
-                            <constraint firstItem="h9n-2r-73V" firstAttribute="top" secondItem="1wK-7U-F4n" secondAttribute="bottom" constant="8" id="Ujn-Y9-3bk"/>
-                            <constraint firstItem="h9n-2r-73V" firstAttribute="height" secondItem="MqZ-5H-jfC" secondAttribute="height" multiplier="0.777778" id="bfj-Zq-b6N"/>
-                            <constraint firstItem="1wK-7U-F4n" firstAttribute="top" secondItem="ycs-NF-0Dy" secondAttribute="top" constant="22" id="cFN-iB-4nV"/>
-                            <constraint firstItem="ycs-NF-0Dy" firstAttribute="trailing" secondItem="h9n-2r-73V" secondAttribute="trailing" constant="20" id="xzG-JM-jah"/>
+                            <constraint firstItem="h9n-2r-73V" firstAttribute="top" secondItem="ycs-NF-0Dy" secondAttribute="top" constant="71" id="G7R-uc-Ss7"/>
+                            <constraint firstItem="h9n-2r-73V" firstAttribute="leading" secondItem="ycs-NF-0Dy" secondAttribute="leading" constant="20" id="Iqk-Yb-Kd4"/>
+                            <constraint firstItem="h9n-2r-73V" firstAttribute="width" secondItem="ycs-NF-0Dy" secondAttribute="width" multiplier="0.950495" id="J0Q-Io-UeB"/>
+                            <constraint firstItem="h9n-2r-73V" firstAttribute="height" secondItem="ycs-NF-0Dy" secondAttribute="height" multiplier="0.819338" id="PxE-9H-hYq"/>
+                            <constraint firstItem="ycs-NF-0Dy" firstAttribute="trailing" secondItem="h9n-2r-73V" secondAttribute="trailing" constant="20" id="gse-U3-MIB"/>
+                            <constraint firstItem="pLX-Bp-djl" firstAttribute="width" secondItem="ycs-NF-0Dy" secondAttribute="width" id="y92-oW-ogc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ycs-NF-0Dy"/>
                     </view>
                     <navigationItem key="navigationItem" id="Thf-2e-81h"/>
                     <connections>
                         <outlet property="buttonBack" destination="1wK-7U-F4n" id="2Ye-j8-e7C"/>
+                        <outlet property="labelTitle" destination="OcU-hF-LPW" id="AWL-Xx-Dej"/>
                         <outlet property="scrollview" destination="h9n-2r-73V" id="yVu-yn-FPW"/>
                         <outlet property="stackview" destination="pLX-Bp-djl" id="igk-o8-Lqs"/>
                     </connections>

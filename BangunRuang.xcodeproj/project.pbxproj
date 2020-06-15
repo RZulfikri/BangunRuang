@@ -15,6 +15,7 @@
 		443FEEED24938C4700AADE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443FEEEB24938C4700AADE71 /* Main.storyboard */; };
 		443FEEEF24938C4800AADE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443FEEEE24938C4800AADE71 /* Assets.xcassets */; };
 		443FEEF224938C4800AADE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443FEEF024938C4800AADE71 /* LaunchScreen.storyboard */; };
+		4458B2B8249784D300BB5EFA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B2B7249784D300BB5EFA /* PaddingLabel.swift */; };
 		44A9F0152496D6AA00BF0994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9F0142496D6AA00BF0994 /* MainViewController.swift */; };
 		44A9F0192496E2DB00BF0994 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9F0182496E2DB00BF0994 /* MenuViewController.swift */; };
 		44A9F01C2496E5C300BF0994 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9F01B2496E5C300BF0994 /* MenuItem.swift */; };
@@ -36,6 +37,7 @@
 		443FEEEE24938C4800AADE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443FEEF124938C4800AADE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443FEEF324938C4800AADE71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4458B2B7249784D300BB5EFA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		44A9F0142496D6AA00BF0994 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		44A9F0182496E2DB00BF0994 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		44A9F01B2496E5C300BF0994 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				44A9F01D2496E74600BF0994 /* MenuHeader.swift */,
 				44C67A4E249712E400F719AE /* ShortcutMenu.swift */,
 				44C67A502497180C00F719AE /* ShortcutMenuItem.swift */,
+				4458B2B7249784D300BB5EFA /* PaddingLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				443FEEE624938C4700AADE71 /* AppDelegate.swift in Sources */,
 				44A9F01E2496E74600BF0994 /* MenuHeader.swift in Sources */,
 				44052A1F2497265700A55294 /* ShapeInfo.swift in Sources */,
+				4458B2B8249784D300BB5EFA /* PaddingLabel.swift in Sources */,
 				44C67A4F249712E400F719AE /* ShortcutMenu.swift in Sources */,
 				44A9F01C2496E5C300BF0994 /* MenuItem.swift in Sources */,
 				443FEEEA24938C4700AADE71 /* Experience.rcproject in Sources */,

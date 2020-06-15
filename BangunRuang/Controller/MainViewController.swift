@@ -102,8 +102,7 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
     }
     
     func onPressInfo() {
-        showAlert()
-//        performSegue(withIdentifier: "main2info", sender: currentShape)
+        performSegue(withIdentifier: "main2info", sender: self)
     }
     
     @IBAction func onPressButton(_ sender: UIButton) {
@@ -149,12 +148,17 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
     
     func selectShape(shape: ShapeEnum) {
         currentShape = shape
+        shortcutObjContainer.isHidden = !shortcutObjContainer.isHidden
         prepareShape(shape: shape)
      }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ShortcutMenu {
             vc.delegate = self
+        }
+        
+        if let vc = segue.destination as? InfoViewController {
+            vc.currentShape = currentShape
         }
     }
     
