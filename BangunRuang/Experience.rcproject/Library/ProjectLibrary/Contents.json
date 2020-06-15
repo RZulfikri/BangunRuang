@@ -8,5 +8,20 @@
     "libraryIdentifier" : "501dd360c77880992bff36ee1921d542",
     "format" : "model",
     "displayName" : "jaringkubus2.usdz"
+  },
+  {
+    "libraryIdentifier" : "3e4d3ee5ff796513b170eb8acbf29931",
+    "format" : "model",
+    "displayName" : "limasclose.usdz"
+  },
+  {
+    "libraryIdentifier" : "744d3a3e43a327889fecf8c49cfff1ab",
+    "format" : "model",
+    "displayName" : "limasopen.usdz"
+  },
+  {
+    "libraryIdentifier" : "088452e835aa9643d6be42f27b90025e",
+    "format" : "model",
+    "displayName" : "kubusungutexture.usdz"
   }
 ]

@@ -18,7 +18,7 @@ protocol ShortcutMenuDelegate {
 class ShortcutMenu: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let menuItems: [Menu] = [
           Menu(name: "Kubus", image: #imageLiteral(resourceName: "kubus")),
-          Menu(name: "Limas", image: #imageLiteral(resourceName: "kubus")),
+          Menu(name: "Limas", image: #imageLiteral(resourceName: "Limas")),
           Menu(name: "Balok", image: #imageLiteral(resourceName: "balok")),
           Menu(name: "Prisma", image: #imageLiteral(resourceName: "prisma"))
       ]

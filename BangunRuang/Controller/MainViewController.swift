@@ -26,8 +26,18 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         containerInfo.layer.cornerRadius = 10
-        
         prepareShape(shape: currentShape)
+        
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handleDidPan(_:)))
+        arView.addGestureRecognizer(pan)
+    }
+    
+    @objc func handleDidPan(_ sender: UIPanGestureRecognizer) {
+        if (sender.state == .ended) {
+            print("PAN END")
+            let translation = sender.translation(in: arView)
+            print(translation.x)
+        }
     }
     
     func prepareShape(shape: ShapeEnum) {
@@ -38,14 +48,17 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
             labelTitle.text = "Kubus"
             let obj3D = try! Experience.loadKubus()
             let obj2D = try! Experience.loadKubusOpen()
-       
+            obj3D.generateCollisionShapes(recursive: true)
+            obj2D.generateCollisionShapes(recursive: true)
             arView.scene.anchors.append(contentsOf: [obj3D, obj2D])
             arView.scene.anchors[1].isEnabled = false
             break
         case .limas:
             labelTitle.text = "Limas"
-            let obj3D = try! Experience.loadBox()
-            let obj2D = try! Experience.loadBox()
+            let obj3D = try! Experience.loadLimas()
+            let obj2D = try! Experience.loadLimasOpen()
+            obj3D.generateCollisionShapes(recursive: true)
+            obj2D.generateCollisionShapes(recursive: true)
             arView.scene.anchors.append(contentsOf: [obj3D, obj2D])
             arView.scene.anchors[1].isEnabled = false
             break
@@ -60,6 +73,7 @@ class MainViewController: UIViewController, ShortcutMenuDelegate {
         buttonNext.isEnabled = true
         buttonPrev.isEnabled = false
     }
+
     
     func onPressBack() {
         dismiss(animated: true, completion: nil)
