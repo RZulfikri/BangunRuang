@@ -19,32 +19,43 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonLayout: UIButton!
     @IBOutlet var buttonInfo: UIButton!
     @IBOutlet var labelTitle: UILabel!
+    @IBOutlet var shortcutObjContainer: UIView!
+    @IBOutlet var containerInfo: UIView!
     
     var currentShape: ShapeEnum = .kubus
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerInfo.layer.cornerRadius = 10
+        
+        
         prepareShape(shape: currentShape)
     }
     
     func prepareShape(shape: ShapeEnum) {
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
         
         switch shape {
         case .kubus:
             labelTitle.text = "Kubus"
+            let obj3D = try! Experience.loadKubus()
+            let obj2D = try! Experience.loadKubusOpen()
+       
+            arView.scene.anchors.append(contentsOf: [obj3D, obj2D])
+            arView.scene.anchors[1].isEnabled = false
             break
         case .limas:
             labelTitle.text = "Limas"
+            let obj = try! Experience.loadBox()
+            arView.scene.anchors.append(obj)
             break
         default:
+            let obj = try! Experience.loadBox()
+            arView.scene.anchors.append(obj)
             break
         }
         
-           
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        buttonPrev.isEnabled = false
     }
     
     func onPressBack() {
@@ -52,23 +63,29 @@ class MainViewController: UIViewController {
     }
     
     func onPressChangeObj() {
-        
+        shortcutObjContainer.isHidden = !shortcutObjContainer.isHidden
     }
     
     func onPressPrev() {
-        
+        buttonPrev.isEnabled = false
+        buttonNext.isEnabled = true
+        arView.scene.anchors[0].isEnabled = true
+        arView.scene.anchors[1].isEnabled = false
     }
     
     func onPressNext() {
-        
+        buttonPrev.isEnabled = true
+        buttonNext.isEnabled = false
+        arView.scene.anchors[0].isEnabled = false
+        arView.scene.anchors[1].isEnabled = true
     }
     
     func onPressLayout() {
-        
+        showAlert()
     }
     
     func onPressInfo() {
-        
+        performSegue(withIdentifier: "main2info", sender: currentShape)
     }
     
     @IBAction func onPressButton(_ sender: UIButton) {
@@ -87,6 +104,9 @@ class MainViewController: UIViewController {
             break
         case buttonInfo:
             onPressInfo()
+            break
+        case buttonLayout:
+            onPressLayout()
             break
         default:
             break
